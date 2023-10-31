@@ -7,20 +7,9 @@ terraform {
   }
 }
 
-variable "image_name" {
-  default = "nginx:latest"
-}
-
-variable "force_remove" {
-  default = false
-}
-
 resource "docker_image" "nginx" {
   name         = var.image_name
-  force_remove = var.force_remove
+  force_remove = false
   keep_locally = false
 }
 
-output "image_name" {
-  value = var.image_name
-}
