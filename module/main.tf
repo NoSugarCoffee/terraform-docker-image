@@ -7,9 +7,8 @@ terraform {
   }
 }
 
-resource "docker_image" "nginx" {
+resource "docker_image" "image" {
   name         = var.image_name
-  force_remove = false
+  force_remove = var.force_remove
   keep_locally = false
 }
-

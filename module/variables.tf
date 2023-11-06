@@ -5,4 +5,10 @@
 
 variable "image_name" {
   default = "nginx:latest"
+  type    = string
+}
+
+variable "force_remove" {
+  default = false
+  type    = bool
 }
