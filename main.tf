@@ -1,4 +1,4 @@
 module "hello_world_image" {
-  source = "./module"
+  source = "modules"
   image_name = "hello-world"
 }
